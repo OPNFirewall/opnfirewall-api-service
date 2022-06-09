@@ -1,5 +1,5 @@
-import Errors from "../../globals/Errors";
-import RegexDB from "../../globals/RegexDB";
+import Errors from '../../globals/Errors';
+import RegexDB from '../../globals/RegexDB';
 
 class DNSServer {
   constructor() {
@@ -10,7 +10,7 @@ class DNSServer {
   validate() {
     if (!RegexDB.ipAddress.test(this.host)) {
       return Errors.invalidIPAddress;
-    } else if (RegexDB.hostnameRFC952.test(this.host)) {
+    } if (RegexDB.hostnameRFC952.test(this.host)) {
       return Errors.invalidHostname;
     }
 

@@ -4,7 +4,6 @@ module.exports = {
     es2021: true,
   },
   extends: [
-    'eslint-recommended',
     'airbnb-base',
   ],
   parserOptions: {
@@ -13,4 +12,5 @@ module.exports = {
   },
   rules: {
   },
+  ignorePatterns: ['*.spec.js'],
 };

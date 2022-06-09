@@ -1,5 +1,5 @@
-import Errors from "../../globals/Errors";
-import RegexDB from "../../globals/RegexDB";
+import Errors from '../../globals/Errors';
+import RegexDB from '../../globals/RegexDB';
 
 class IPRange {
   constructor(from, to) {
@@ -8,11 +8,11 @@ class IPRange {
   }
 
   validate() {
-    if(!RegexDB.ipAddress.test(from)) {
-      return Errors.invalidIPAddress; 
+    if (!RegexDB.ipAddress.test(this.from)) {
+      return Errors.invalidIPAddress;
     }
 
-    if(!RegexDB.ipAddress.test(to)) {
+    if (!RegexDB.ipAddress.test(this.to)) {
       return Errors.invalidIPAddress;
     }
 

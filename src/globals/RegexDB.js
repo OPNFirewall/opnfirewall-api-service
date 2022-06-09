@@ -12,6 +12,11 @@ RegexDB.ipAddress = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-
 /**
  * Regex to see if the given string is a valid RFC952 hostname
  */
-RegexDB.hostnameRFC952 = /^(([a-zA-Z]|[a-zA-Z][a-zA-Z0-9\-]*[a-zA-Z0-9])\.)*([A-Za-z]|[A-Za-z][A-Za-z0-9\-]*[A-Za-z0-9])$/;
+RegexDB.hostnameRFC952 = /^(([a-zA-Z]|[a-zA-Z][a-zA-Z0-9-]*[a-zA-Z0-9])\.)*([A-Za-z]|[A-Za-z][A-Za-z0-9-]*[A-Za-z0-9])$/;
+
+/**
+ * Regex to see if the given string is a valid mac adress
+ */
+RegexDB.macAdress = /^[0-9a-f]{1,2}([.:-])(?:[0-9a-f]{1,2}\1){4}[0-9a-f]{1,2}$/;
 
 export default RegexDB;
