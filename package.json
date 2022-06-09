@@ -5,13 +5,14 @@
     "eslint-plugin-import": "^2.26.0"
   },
   "scripts": {
-    "test": "mocha --recursive src/tests/ --require @babel/register",
+    "test": "nyc mocha --recursive src/tests/ --require @babel/register",
     "test:watch": "mocha --watch --watch-files src/tests/ --recursive src/tests/ --require @babel/register"
   },
   "dependencies": {
     "@babel/cli": "^7.7.4",
     "@babel/core": "^7.7.4",
     "@babel/preset-env": "^7.7.4",
-    "@babel/register": "^7.7.4"
+    "@babel/register": "^7.7.4",
+    "nyc": "^15.1.0"
   }
 }
